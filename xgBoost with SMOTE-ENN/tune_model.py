@@ -25,7 +25,7 @@ def tune_xgboost(X_train, y_train):
     grid_search = GridSearchCV(
         estimator=model,
         param_grid=param_grid,
-        scoring='accuracy',
+        scoring='f1_macro',  # 🔁 updated scoring
         cv=5,
         verbose=1,
         n_jobs=-1
@@ -34,6 +34,6 @@ def tune_xgboost(X_train, y_train):
     print("🔍 Running grid search (this may take a while)...")
     grid_search.fit(X_train, y_train)
     print(f"\n🏁 Best Parameters: {grid_search.best_params_}")
-    print(f"✅ Best CV Accuracy: {grid_search.best_score_ * 100:.2f}%")
+    print(f"✅ Best CV Macro-F1: {grid_search.best_score_ * 100:.2f}%")
 
     return grid_search.best_estimator_

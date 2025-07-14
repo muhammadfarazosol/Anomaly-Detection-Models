@@ -13,11 +13,12 @@ def evaluate_model(model, X_test, y_test):
     print("📋 Classification Report (per class):")
     print(classification_report(y_test, y_pred, zero_division=0))
 
-    # print("🔷 Confusion Matrix:")
+    # # Optional: Confusion Matrix
     # cm = confusion_matrix(y_test, y_pred)
     # plt.figure(figsize=(6, 4))
     # sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=range(4), yticklabels=range(4))
     # plt.xlabel("Predicted")
     # plt.ylabel("Actual")
     # plt.title("Confusion Matrix")
+    # plt.tight_layout()
     # plt.show()

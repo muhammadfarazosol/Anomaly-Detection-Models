@@ -5,7 +5,7 @@ from evaluate_model import evaluate_model
 from tune_model import tune_xgboost
 
 def main():
-    print("📥 Loading and preprocessing data (with SMOTE)...")
+    print("📥 Loading and preprocessing data (with SMOTEENN)...")
     X_train, X_test, y_train, y_test = load_and_preprocess_data()
 
     print("🧪 Hyperparameter tuning for XGBoost...")
@@ -16,3 +16,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
