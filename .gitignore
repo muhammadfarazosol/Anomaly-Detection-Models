@@ -1,3 +1,8 @@
 __pycache__
 /lstm-autoencoder anomaly
 /industrial_anomaly_detection
+venv
+/Air Compressor Metro
+/metro-air-compressor/MetroPT3(AirCompressor).csv
+/vae-anomaly-detection/MetroPT3(AirCompressor).csv
+/xgBoost/smart_manufacturing_data.csv
